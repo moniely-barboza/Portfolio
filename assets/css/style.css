@@ -9,21 +9,35 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* Estilo Boby */
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
 }
 
+/* Estilo Links <a> 
+Aplicação de Herança
+  Estilo do body é herdado
+*/
 a {
   color: #0563bb;
   text-decoration: none;
 }
 
+/* Estilo Links <a> quando passa o mouse.
+Aplicação de Herança
+  Estilo do body é herdado
+Aplicação de cascata
+  A regra para elementos <a> é alterada de acordo com o estado (houver) */
 a:hover {
   color: #067ded;
   text-decoration: none;
 }
 
+/* Estilo de títulos
+Aplicação de Herança
+  Estilo do body é herdado
+*/
 h1,
 h2,
 h3,
@@ -36,6 +50,12 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+/* Estilo do botão de voltar para o topo
+Aplicação de cascata
+  Define mudança do estilo quando o mouse está sobre ele e quando ele está visible (ou não) 
+  E define estilo do ícone do botão
+Aplicação de especificidade
+  Seletores de classe*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -69,6 +89,12 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+/* Estilo do preloader 
+Aplicação de Cascata
+  Mudanças de estilo para fazer a animação de carregamento 
+Aplicação de especificidade
+  Define o estilo do elemento com ID = 'preloader'
+*/
 #preloader {
   position: fixed;
   top: 0;
@@ -113,9 +139,18 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* Estilo do header
+Aplicação de Herança
+  Estilo do body é herdado
+Aplicação de especificidade
+  Seletores de ID. Estiliza emelentos específico com ID = 'header' e 'main'
+Aplicação de Cascata
+  Regra para o header é definida, mas depois é alterada de acordo com o tamanho da tela
+*/
 #header {
   position: fixed;
   top: 0;
@@ -147,6 +182,14 @@ h6 {
 --------------------------------------------------------------*/
 /**
 * Desktop Navigation 
+*/
+/* Estilo do menu de navegação 
+Aplicação de Herança
+  Estilo do body é herdado
+Aplicação de Especificidade
+  Seletores de Classe .nav-menu
+Aplicação de Cascata
+  Várias regras afetam o estilo do mesmo elemento 'nav-menu'
 */
 .nav-menu {
   padding: 0;
@@ -235,6 +278,14 @@ h6 {
 /**
 * Mobile Navigation 
 */
+/* Estilo do menu de navegação para dispositivos móveis
+Aplicação de Herança
+  Estilo do body é herdado
+Aplicação de Especificidade
+  Seletores de Classe .mobile-nav-toggle
+Aplicação de Cascata
+  Várias regras afetam o estilo do mesmo elemento '.mobile-nav-toggle'
+*/
 .mobile-nav-toggle {
   position: fixed;
   right: 10px;
@@ -271,6 +322,14 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* Estilo da seção #hero
+Aplicação de Especificidade
+  Seletores de elemento #hero
+Aplicação de Cascata
+  Várias regras afetam o estilo do mesmo elemento '#hero' de acordo com seu estado
+Aplicação de Herança
+  Estilo do body é herdado
+*/
 #hero {
   width: 100%;
   height: 100vh;
@@ -352,6 +411,19 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+/* Estilo das seções
+Aplicação de Especificidade
+  Seletores de Classe .section e .section-title
+  Seletores mais específicos h2, p
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'section-title'.
+  Elementos como h2 e p são personalizados 
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
+Aplicação de Herança
+  Estilo do body é herdado
+*/
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -401,6 +473,17 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+/* Estilo da seção About
+Aplicação de Especificidade
+  Seletores de Classe .about
+  Seletores mais específicos .content, h3, ul, li, strong, i, p
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'about'
+  Elementos como h3 e p são personalizados 
+  Elementos como ul e li são personalizados
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -436,6 +519,16 @@ section {
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
+/* Estilo da seção Facts
+Aplicação de Especificidade
+  Seletores de Classe .facts
+  Seletores mais específicos .count-box, i, span, p
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'facts'.
+  Elementos como p são personalizados 
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .facts .count-box {
   padding: 30px 30px 25px 30px;
   margin-top: 30px;
@@ -478,6 +571,15 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+/* Estilo da seção Skills
+Aplicação de Especificidade
+  Seletores de Classe .skills
+  Seletores mais específicos .progress, .progress-bar-wrap, .progress-bar
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'skills'
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .skills .progress {
   height: 60px;
   display: block;
@@ -514,6 +616,15 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+/* Estilo da seção Resume
+Aplicação de Especificidade
+  Seletores de Classe .resume
+  Seletor mais específicos .resume-title, .resume-item, h4, h5, ul, li
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'resume'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -575,6 +686,15 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+/* Estilo da seção Portfolio
+Aplicação de Especificidade
+  Seletores de Classe .portifolio
+  Seletor mais específicos .portfolio-item, #portfolio-flters, #portfolio-flters li, .portfolio-wrap, .portfolio-info, .portfolio-links, a
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'portfolio'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -732,6 +852,15 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+/* Estilo da seção detalhes do portifolio
+Aplicação de Especificidade
+  Seletores de Classe .portifolio-details
+  Seletor mais específicos .portifolio-details-slider, .swiper-pagination, .swiper-pagination-bullet, .swiper-pagination-bullet-active, .portifolio-info, h3, ul, li, .portifolio-description, h2, p
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'portfolio-details'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .portfolio-details {
   padding-top: 40px;
 }
@@ -797,6 +926,15 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+/* Estilo da seção serviços
+Aplicação de Especificidade
+  Seletores de Classe .services
+  Seletor mais específicos .icon-box, .icon, i, svg, path, h4, p, .iconbox-blue, .iconbox-orange, .iconbox-pink, .iconbox-yellow, .iconbox-red, .iconbox-teal
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'services'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -930,6 +1068,15 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+/* Estilo da seção Testimonials
+Aplicação de Especificidade
+  Seletores de Classe .testimonials
+  Seletor mais específicos .section-header, .testimonials-carousel, .testimonials-slider, .testimonial-item, .testimonial-img, h3, h4, .quote-icon-left, .quote-icon-right, p, .swiper-pagination, .swiper-pagination-bullet, .swiper-pagination-bullet-active
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'testimonials'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .testimonials .section-header {
   margin-bottom: 40px;
 }
@@ -1013,6 +1160,15 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+/* Estilo da seção Contato
+Aplicação de Especificidade
+  Seletores de Classe .contact
+  Seletor mais específicos .info, i, h4, p, .email, .phone, .php-email-form, .form-group, .error-message, .sent-message, .loading, .loading:before, input, textarea, button
+Aplicação de Cascata
+  Várias regras afetam o estilo da classe 'contact'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1151,6 +1307,15 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+/* Estilo da seção serviços
+Aplicação de Especificidade
+  Seletor de Elemento #footer
+  Seletor mais específicos h3, p, .social-links, a, .copyright, .credits
+Aplicação de Cascata
+  Várias regras afetam o estilo do elemento 'footer'.
+Aplicação de Herança
+  Estilo do body, links e títulos (q não foram personalizados) é herdado
+*/
 #footer {
   background: #f7f8f9;
   color: #45505b;
